@@ -9,6 +9,7 @@ Simple schedule manager using HTML, CSS, and PHP*
 <h1>Steps to follow</h1>
 <ul>
   <li>Run Xampp control panel</li>
+  <li>Run Apache server and MySQL server</li>
   <li>Create a database named routine through phpmyadmin</li>
   <li>
     Create a table named routine<br>
