@@ -12,7 +12,7 @@ Simple schedule manager using HTML, CSS, and PHP*
   <li>Run Apache server and MySQL server</li>
   <li>Create a database named routine through phpmyadmin</li>
   <li>
-    Create a table named routine<br>
+    Run this query and create a table named routine:<br>
     Create TABLE routine (
     Period int AUTO_INCREMENT PRIMARY KEY,
     Subject_name varchar(100),
