@@ -1,0 +1,6 @@
+<?php
+    include("dbconn.php");
+    $subject_name = $_POST['subject_name'];
+    $teacher_name = $_POST['teacher_name'];
+    $time = $_POST['time'];
+?>
