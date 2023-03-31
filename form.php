@@ -10,17 +10,17 @@
     <fieldset>
         <form action="routin.php">
             <h1>Routine</h1>
-            <label for="">period</label><br>
+            <label for="">Period</label><br>
             <input type="text" name="period" id="SN"><br>
-            <label for="">subject_name</label><br>
+            <label for="">Subject_ame</label><br>
             <input type="text" name="subject_name" id="sname"><br>
-            <label for="">teacher</label><br>
+            <label for="">Teacher</label><br>
             <input type="text" name="teacher" id="teacher"><br>
-            <label for="">time</label><br>
+            <label for="">Time</label><br>
             <input type="time" name="time" id="time"><br>
-            <input type="submit" name="add" id="add" value="add">
-            <input type="submit" name="edit" id="edit" value="edit">   
-            <input type="submit" name="delete" id="delete" value="delete">   
+            <input type="submit" name="add" id="add" value="Add">
+            <input type="submit" name="edit" id="edit" value="Edit">   
+            <input type="submit" name="delete" id="delete" value="Delete">   
         </form>
     </fieldset>
 </body>
