@@ -8,7 +8,7 @@
 </head>
 <body>
     <fieldset>
-        <form action="routin.php">
+        <form action= "" method = "post">
             <h1>Routine</h1>
             <label for="">Period</label><br>
             <input type="text" name="period" id="SN"><br>
@@ -18,9 +18,9 @@
             <input type="text" name="teacher" id="teacher"><br>
             <label for="">Time</label><br>
             <input type="time" name="time" id="time"><br>
-            <input type="submit" name="add" id="add" value="Add">
+            <input type="submit" name="add" id="add" value="Add" formaction="add.php">
             <input type="submit" name="edit" id="edit" value="Edit">   
-            <input type="submit" name="delete" id="delete" value="Delete">   
+            <input type="submit" name="delete" id="delete" value="Delete" formaction="delete.php">   
         </form>
     </fieldset>
 </body>

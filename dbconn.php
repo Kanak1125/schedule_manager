@@ -4,5 +4,5 @@
     $db = "routine";
     $pass = "";
     $dsn = "mysql:host=$host;dbname=$db;";
-    $pdo = new PDO($dsn, $user, $pass);  
+    $pdo = new PDO($dsn,$user,$pass);  
 ?>
