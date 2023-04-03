@@ -9,17 +9,18 @@
 <body>
     <fieldset>
         <form action= "" method = "post">
+            
             <h1>Routine</h1>
-            <label for="">Period</label><br>
-            <input type="text" name="period" id="SN"><br>
-            <label for="">Subject_ame</label><br>
+            <label for="">Period</label><br>   
+            <input type="number" name="period" id="period"><br>
+            <label for="">Subject name</label><br>
             <input type="text" name="subject_name" id="sname"><br>
             <label for="">Teacher</label><br>
             <input type="text" name="teacher" id="teacher"><br>
             <label for="">Time</label><br>
             <input type="time" name="time" id="time"><br>
             <input type="submit" name="add" id="add" value="Add" formaction="add.php">
-            <input type="submit" name="edit" id="edit" value="Edit">   
+            <input type="submit" name="edit" id="edit" value="Edit" formaction="edit.php">   
             <input type="submit" name="delete" id="delete" value="Delete" formaction="delete.php">   
         </form>
     </fieldset>

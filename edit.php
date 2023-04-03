@@ -1,18 +1,18 @@
 <?php
     include_once ("dbconn.php");
+    $period = $_POST['period'];
     $subject_name = $_POST['subject_name'];
     $teacher = $_POST['teacher'];
     $time = $_POST['time'];
-    
-    $query = "INSERT INTO routine(Subject_name,Teacher,Duration) VALUES(:Subject_name,:Teacher,:Duration)";
+
+    $query = "UPDATE routine SET Subject_name=:Subject_name, Teacher=:Teacher, Duration=:Duration WHERE Period=:Period";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(':Subject_name', $subject_name);
     $stmt->bindParam(':Teacher', $teacher);
     $stmt->bindParam(':Duration', $time);
+    $stmt->bindParam(':Period', $period);
     $stmt->execute();
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +20,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="2; url='./routine.php'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add</title>
+    <title>Update</title>
 </head>
 <body>
-    <p>Entry added successfully</p>
+    <p>Entry updated successfully</p>
     <p>You will be redirected to routine page</p>
 </body>
 </html>
