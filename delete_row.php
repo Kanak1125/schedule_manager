@@ -4,10 +4,11 @@
     $period_num = $_GET['period'];  // receiving and storing the period number so that we can delete that particular row only...
     
     $query = "DELETE FROM routine WHERE Period=$period_num";
-
+    
     $stmt = $pdo -> prepare($query);
+    
     $stmt -> execute();
-
+    include './auto_increment.php'; // everytime the row is deleted auto_increment is executed...
 ?>
 
 <!DOCTYPE html>
