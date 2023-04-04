@@ -23,6 +23,7 @@
             <th>Subject Name</th>
             <th>Teacher</th>
             <th>Time</th>
+            <th>Action</th>
         </tr>
         <?php foreach ($periods as $p) { 
         ?>
@@ -31,6 +32,12 @@
                 <td><?php echo $p['Subject_name']?></td>
                 <td><?php echo $p['Teacher']?></td>
                 <td><?php echo $p['Duration']?></td>
+                <td>
+                    <a href="./php"><button>Edit</button></a>
+
+                    <!-- passing current period of the row from the table to the 'delete_row.php' file -->
+                    <a href="./delete_row.php?period=<?php echo $p['Period'] ?>"><button>Delete</button></a>
+                </td>
                 <?php } ?>
             </tr>
     </table>
