@@ -35,7 +35,7 @@
             </tr>
     </table>
     <div class="btn-container">
-        <a href="./add.php"><button>Add</button></a>
+        <a href="./form.php"><button>Add</button></a>
         <a href="./edit.php"><button>Edit</button></a>
         <a href="./delete.php"><button>Delete</button></a>
     </div>
