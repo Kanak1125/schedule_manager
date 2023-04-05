@@ -1,9 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="1.5; url='./routine.php'"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete row</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="search">Search By Id:</label>
+        <input type="number" name="search" id="search" value="0">
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>
 <?php
-$host = "127.0.0.1";
-$user = "root";
-$db = "routine";
-$pass = "";
-$dsn = "mysql:host=$host;dbname=$db;";
-$pdo = new PDO($dsn, $user, $pass);
-echo "database connected";
+ include_once './dbconn.php';
+
+ $Period = $_POST['search'];
+ echo $Period;
+
+ $query = "DELETE FROM routine WHERE Period = $Period";
+
+ $stmt = $pdo -> prepare($query);
+    
+    $stmt -> execute();
+    include './auto_increment.php'; 
 ?>
+
