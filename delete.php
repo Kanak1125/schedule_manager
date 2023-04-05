@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- <meta http-equiv="refresh" content="1.5; url='./routine.php'"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delete row</title>
 </head>
+
 <body>
     <form action="#" method="post">
         <label for="search">Search By Id:</label>
@@ -13,18 +15,26 @@
         <input type="submit" value="Delete">
     </form>
 </body>
+
 </html>
 <?php
- include_once './dbconn.php';
+include_once './dbconn.php';
 
- $Period = $_POST['search'];
- echo $Period;
 
- $query = "DELETE FROM routine WHERE Period = $Period";
+if (isset($_POST['search'])) {
+    $Period = $_POST['search'];
+    $query = "DELETE FROM routine WHERE Period = $Period";
 
- $stmt = $pdo -> prepare($query);
-    
-    $stmt -> execute();
-    include './auto_increment.php'; 
+    $stmt = $pdo->prepare($query);
+
+    $stmt->execute();
+    include './auto_increment.php';
+
+
+} else {
+
+
+}
+
+
 ?>
-
