@@ -31,7 +31,10 @@
                 <td><?php echo $p['Period']?></td>
                 <td><?php echo $p['Subject_name']?></td>
                 <td><?php echo $p['Teacher']?></td>
-                <td><?php echo $p['Duration']?></td>
+                <td>
+                    <?php echo $p['Start_time']?> - 
+                    <?php echo $p['End_time']?> 
+                </td>
                 <td>
                     <a href="./php"><button>Edit</button></a>
 

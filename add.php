@@ -2,13 +2,16 @@
     include_once ("dbconn.php");
     $subject_name = $_POST['subject_name'];
     $teacher = $_POST['teacher'];
-    $time = $_POST['time'];
-    
-    $query = "INSERT INTO routine(Subject_name,Teacher,Duration) VALUES(:Subject_name,:Teacher,:Duration)";
+    $s_time = $_POST['s_time'];
+    $e_time = $_POST['e_time'];
+
+    $query = "INSERT INTO routine(Subject_name,Teacher,Start_time, End_time) VALUES(:Subject_name,:Teacher,:Start_time, :End_time)";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(':Subject_name', $subject_name);
     $stmt->bindParam(':Teacher', $teacher);
-    $stmt->bindParam(':Duration', $time);
+    $stmt->bindParam(':Start_time', $s_time);
+    $stmt->bindParam(':End_time', $e_time);
+
     $stmt->execute();
 
 ?>
