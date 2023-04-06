@@ -1,18 +1,21 @@
 /* font family imported from google fonts...*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 h2 {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 table,
-th, td {
+th,
+td {
     border: 1.25px solid hsl(0, 0%, 30%);
     border-collapse: collapse;
     padding: 5px;
@@ -36,7 +39,7 @@ tr:nth-child(even) {
 }
 
 .btn-edit {
-    background-color: hsl(203, 92%, 65%);
+    background-color: hsl(82, 100%, 45%);
 }
 
 .btn-add {
@@ -49,22 +52,23 @@ tr:nth-child(even) {
 
 .btn-edit:hover {
     background-color: hsl(203, 92%, 55%);
-    box-shadow: 0px 1px 5px hsl(203, 92%, 50%); 
+    box-shadow: 0px 1px 5px hsl(203, 92%, 50%);
 }
 
 .btn-add:hover {
     background-color: hsl(120, 73%, 55%);
-    box-shadow: 0px 1px 5px hsl(120, 73%, 50%); 
+    box-shadow: 0px 1px 5px hsl(120, 73%, 50%);
 }
 
 .btn-del:hover {
     background-color: hsl(0, 79%, 55%);
-    box-shadow: 0px 1px 5px hsl(0, 79%, 60%); 
+    box-shadow: 0px 1px 5px hsl(0, 79%, 60%);
 }
 
 .btn-for-row {
     padding: 7.5px 13px !important;
 }
+
 .btn-container {
     position: fixed;
     bottom: 15px;
@@ -72,6 +76,7 @@ tr:nth-child(even) {
     display: flex;
     column-gap: .5rem;
 }
-.btn1{
+
+.btn1 {
     background-color: aqua;
 }

@@ -18,14 +18,19 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="0.5; url='./routine.php'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update</title>
+    <style>
+    </style>
 </head>
+
 <body>
     <p>Entry updated successfully</p>
     <p>You will be redirected to routine page</p>
 </body>
+
 </html>
