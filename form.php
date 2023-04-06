@@ -33,8 +33,13 @@
 
 <body>
     <?php
+        $period_id;
         // we use 'GET' method here because we are reading the period data directly from the URL...
-        $period_id = $_GET['period'];
+        if(!isset($_GET['period'])) {   // if the value of 'period' is NOT SET assign empty string to $period_id else assign it a received value(id)...
+            $period_id = "";
+        } else {
+            $period_id = $_GET['period'];
+        }
     ?>
     
         <form action= "" method = "post" class="form">
