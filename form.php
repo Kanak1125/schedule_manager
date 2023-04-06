@@ -9,83 +9,83 @@
 
 </head>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    .form-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-    form {
-        label width: 400px;
-        height: 400px;
-        border: 1px solid black;
-        padding: 20px;
-        border-radius: 10px;
-        background-color: orange;
-    }
+form {
+    label width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: gray;
+}
 
-    input[type="submit"] {
+input[type="submit"] {
 
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-
-    .btn {
-        padding: 6px 15px;
-        border: none;
-        color: white;
-        border-radius: 2.5px;
-        cursor: pointer;
-        transition: all 300ms ease-out;
-    }
-
-    .btn-edit {
-        background-color: hsl(82, 100%, 45%);
-    }
-
-    .btn-add {
-        background-color: hsl(120, 73%, 65%);
-        cursor: pointer;
-    }
-
-    .btn-del {
-        background-color: hsl(0, 79%, 65%);
-        cursor: pointer;
-    }
-
-    .btn-edit:hover {
-        background-color: hsl(203, 92%, 55%);
-        box-shadow: 0px 1px 5px hsl(203, 92%, 50%);
-    }
-
-    .btn-add:hover {
-        background-color: hsl(120, 73%, 55%);
-        box-shadow: 0px 1px 5px hsl(120, 73%, 50%);
-    }
-
-    .btn-del:hover {
-        background-color: hsl(0, 79%, 55%);
-        box-shadow: 0px 1px 5px hsl(0, 79%, 60%);
-    }
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
 
-    h2 {
-        text-align: center;
-        padding: 5px;
-    }
+.btn {
+    padding: 6px 15px;
+    border: none;
+    color: white;
+    border-radius: 2.5px;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+
+.btn-edit {
+    background-color: hsl(82, 100%, 45%);
+}
+
+.btn-add {
+    background-color: hsl(120, 73%, 65%);
+    cursor: pointer;
+}
+
+.btn-del {
+    background-color: hsl(0, 79%, 65%);
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    background-color: hsl(203, 92%, 55%);
+    box-shadow: 0px 1px 5px hsl(203, 92%, 50%);
+}
+
+.btn-add:hover {
+    background-color: hsl(120, 73%, 55%);
+    box-shadow: 0px 1px 5px hsl(120, 73%, 50%);
+}
+
+.btn-del:hover {
+    background-color: hsl(0, 79%, 55%);
+    box-shadow: 0px 1px 5px hsl(0, 79%, 60%);
+}
+
+
+h2 {
+    text-align: center;
+    padding: 5px;
+}
 </style>
 
 <body>
