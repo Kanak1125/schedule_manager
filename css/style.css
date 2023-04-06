@@ -28,6 +28,7 @@ center {
 tr:nth-child(even) {
     background-color: #e0e0e0;
 }
+
 .btn {
     padding: 6px 15px;
     border: none;
@@ -38,12 +39,7 @@ tr:nth-child(even) {
 }
 
 .btn-edit {
-<<<<<<< HEAD
     background-color: hsl(82, 100%, 45%);
-=======
-    background-color: hsl(203, 92%, 65%);
-    cursor: pointer;
->>>>>>> 1d6cffb01552aafca1311d525192b24f02a48781
 }
 
 .btn-add {
@@ -82,10 +78,3 @@ tr:nth-child(even) {
     display: flex;
     column-gap: .5rem;
 }
-
-<<<<<<< HEAD
-.btn1 {
-    background-color: aqua;
-}
-=======
->>>>>>> 1d6cffb01552aafca1311d525192b24f02a48781
