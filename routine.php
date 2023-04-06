@@ -62,7 +62,7 @@
                     <?php echo $formatted_end_time?> 
                 </td>
                 <td>
-                    <a href="./edit.php"><button class="btn btn-edit btn-for-row" title="Edit this row"><i class="fas fa-edit"></i></button></a>
+                    <a href="./form.php?period=<?php echo $p['Period']?>"><button class="btn btn-edit btn-for-row" title="Edit this row"><i class="fas fa-edit"></i></button></a>
 
                     <!-- passing current period of the row from the table to the 'delete_row.php' file -->
                     <a href="./delete_row.php?period=<?php echo $p['Period'] ?>">
