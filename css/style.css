@@ -1,7 +1,14 @@
+/* font family imported from google fonts...*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
 h2 {
@@ -14,7 +21,6 @@ th, td {
     border-collapse: collapse;
     padding: 5px;
 }
-
 
 center {
     margin: 50px;

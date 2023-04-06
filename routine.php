@@ -17,12 +17,28 @@
 
     <!-- font awesome cdn for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        th {
+            background-color: #131313;
+            color: #d0d0d0;
+            padding: 7.5px 16px;
+        }
+
+        tr {
+            transition: all 300ms ease-out;
+        }
+
+        table tr:hover {
+            background-color: hsl(203, 92%, 93%);
+        }
+    </style>
 </head>
 <body>
     <center>
     <h2>Routine</h2>
     <table>
-        <tr>
+        <tr class="table-heading">
             <th>Period</th>
             <th>Subject Name</th>
             <th>Teacher</th>
