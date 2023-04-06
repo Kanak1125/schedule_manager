@@ -9,10 +9,16 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
     }
 
     .form-container {
@@ -23,56 +29,52 @@
     }
 
     form {
-        label width: 400px;
-        height: 400px;
-        border: 1px solid black;
+        width: 75vw;
+        max-width: 500px;
+        /* height: 400px; */
+        /* border: 1px solid black; */
         padding: 20px;
         border-radius: 10px;
-        background-color: orange;
+        box-shadow: 1px 1px 10px black;
+        /* background-color: hsla(203, 92%, 85%, 0.6); */
     }
 
-    .btn {
-        padding: 17px 10px;
-        border: none;
-        color: white;
-        border-radius: 2.5px;
-        cursor: pointer;
-        transition: all 300ms ease-out;
-        color: white;
+    input[type="number"],
+    input[type="text"],
+    input[type="time"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        transition: all 300ms linear;
+        border: 1px solid grey;
+        border-radius: 5px;
     }
 
-    .btn-edit {
-        background-color: hsl(82, 100%, 45%);
-    }
-
-    .btn-add {
-        background-color: hsl(120, 73%, 65%);
-        cursor: pointer;
-    }
-
-    .btn-del {
-        background-color: hsl(0, 79%, 65%);
-        cursor: pointer;
-    }
-
-    .btn-edit:hover {
-        background-color: hsl(203, 92%, 55%);
-        box-shadow: 0px 1px 5px hsl(203, 92%, 50%);
-    }
-
-    .btn-add:hover {
-        background-color: hsl(120, 73%, 55%);
-        box-shadow: 0px 1px 5px hsl(120, 73%, 50%);
-    }
-
-    .btn-del:hover {
-        background-color: hsl(0, 79%, 55%);
-        box-shadow: 0px 1px 5px hsl(0, 79%, 60%);
+    input:focus {
+        background-color: hsl(203, 92%, 95%);
+        outline: none !important;
     }
 
     h2 {
         text-align: center;
     }
+
+    .time-container {
+        display: flex;
+        width: 100%;
+        column-gap: 20px;
+    }
+
+    .time-container div {
+        width: 100%;
+    }
+
+    .form-btn-container {
+        margin: 20px 0;
+        display: flex;
+        column-gap: 10px;
+    }
+
 </style>
 
 <body>
@@ -96,15 +98,19 @@
             <label for="teacher">Teacher</label><br>
             <input type="text" name="teacher" id="teacher" required><br>
             <div class="time-container">
-                <label for="s_time">Start Time</label><br>
-                <input type="time" name="s_time" id="s_time" required><br>
-                <label for="e_time">End Time</label><br>
-                <input type="time" name="e_time" id="e_time" required><br>
+                <div class="start-time-container">
+                    <label for="s_time">Start Time</label><br>
+                    <input type="time" name="s_time" id="s_time" required><br>
+                </div>
+                <div class="end-time-container">
+                    <label for="e_time">End Time</label><br>
+                    <input type="time" name="e_time" id="e_time" required><br>
+                </div>
             </div>
-            <div class="btn">
-                <input type="submit" name="add" class="btn-add" value="Add" formaction="add.php">
-                <input type="submit" name="edit" class="btn-edit" value="Edit" formaction="edit.php">
-                <input type="submit" name="delete" class="btn-del" value="Delete" formaction="delete.php"
+            <div class="form-btn-container">
+                <input type="submit" name="add" class="btn btn-add" value="Add" formaction="add.php">
+                <input type="submit" name="edit" class="btn btn-edit" value="Edit" formaction="edit.php">
+                <input type="submit" name="delete" class="btn btn-del" value="Delete" formaction="delete.php"
                     formnovalidate>
                 <!--  formnovalidate attribute added to bypass the form validation only for delete button... -->
             </div>
