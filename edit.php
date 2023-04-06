@@ -3,13 +3,15 @@
     $period = $_POST['period'];
     $subject_name = $_POST['subject_name'];
     $teacher = $_POST['teacher'];
-    $time = $_POST['time'];
+    $s_time = $_POST['s_time'];
+    $e_time = $_POST['e_time'];
 
-    $query = "UPDATE routine SET Subject_name=:Subject_name, Teacher=:Teacher, Duration=:Duration WHERE Period=:Period";
+    $query = "UPDATE routine SET Subject_name=:Subject_name, Teacher=:Teacher, Start_time=:Start_time, End_time=:End_time WHERE Period=:Period";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(':Subject_name', $subject_name);
     $stmt->bindParam(':Teacher', $teacher);
-    $stmt->bindParam(':Duration', $time);
+    $stmt->bindParam(':Start_time', $s_time);
+    $stmt->bindParam(':End_time', $e_time);
     $stmt->bindParam(':Period', $period);
     $stmt->execute();
 ?>
