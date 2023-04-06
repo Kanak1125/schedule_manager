@@ -7,6 +7,30 @@
     <title>Document</title>
     <link rel="stylesheet" href=".\css\style.css">
 </head>
+<style>
+    body{
+        background-color: black;
+        font-family: 'Poppins', sans-serif;
+    }
+    .form{
+        width: 400px;
+        height: 400px;
+        box-sizing: border-box;
+        font-size: 1rem;
+        padding: 2rem;
+        background-color: aqua;
+        display: grid;
+        border: 2px solid green;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn{
+      width: 200px;
+      padding: 12px;
+      justify-content: center;
+      align-items: center;
+    }
+</style>
 
 <body>
     <?php
@@ -18,8 +42,8 @@
             $period_id = $_GET['period'];
         }
     ?>
-    <fieldset>
-        <form action= "" method = "post">
+    
+        <form action= "" method = "post" class="form">
             
             <h2>Manage Your Schedule</h2>
             <label for="period">Period</label><br>   
@@ -34,13 +58,13 @@
                 <label for="e_time">End Time</label><br>
                 <input type="time" name="e_time" id="e_time" required><br>
             </div>
-            <div class="btn1">
+            <div class="btn">
             <input type="submit" name="add" class="btn-add" value="Add" formaction="add.php">
             <input type="submit" name="edit" class="btn-edit" value="Edit" formaction="edit.php">   
             <input type="submit" name="delete" class="btn-del" value="Delete" formaction="delete.php" formnovalidate>
             <!--  formnovalidate attribute added to bypass the form validation only for delete button... -->
             </div>   
         </form>
-    </fieldset>
+    
 </body>
 </html>
