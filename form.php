@@ -10,8 +10,13 @@
 
 <body>
     <?php
+        $period_id;
         // we use 'GET' method here because we are reading the period data directly from the URL...
-        $period_id = $_GET['period'];
+        if(!isset($_GET['period'])) {   // if statement to check if there we are getting the value of the period from the routine table...
+            $period_id = "";
+        } else {
+            $period_id = $_GET['period'];
+        }
     ?>
     <fieldset>
         <form action= "" method = "post">

@@ -74,8 +74,8 @@
     </table>
     </center>
     <div class="btn-container">
-        <a href="./form.php"><button class="btn btn-add">Add</button></a>
-        <a href="./edit.php"><button class="btn btn-edit">Edit</button></a>
+        <a href="./form.php?period=<?php 0?>"><button class="btn btn-add">Update</button></a>
+        <!-- <a href="./edit.php"><button class="btn btn-edit">Edit</button></a> -->
         <a href="./delete.php"><button class="btn btn-del">Delete</button></a>
     </div>
 </body>
