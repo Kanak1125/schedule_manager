@@ -40,7 +40,7 @@
                     <?php echo $p['End_time']?> 
                 </td>
                 <td>
-                    <a href="./php"><button class="btn btn-edit btn-for-row" title="Edit this row"><i class="fas fa-edit"></i></button></a>
+                    <a href="./edit.php"><button class="btn btn-edit btn-for-row" title="Edit this row"><i class="fas fa-edit"></i></button></a>
 
                     <!-- passing current period of the row from the table to the 'delete_row.php' file -->
                     <a href="./delete_row.php?period=<?php echo $p['Period'] ?>">

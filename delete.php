@@ -12,7 +12,9 @@
     <form action="#" method="post">
         <label for="search">Search By Id:</label>
         <input type="number" name="search" id="search" value="0">
-        <input type="submit" value="Delete">
+        <a href="routine.php">
+            <input type="submit" value="Delete">
+        </a>
     </form>
 </body>
 
@@ -30,6 +32,9 @@ if (isset($_POST['search'])) {
     $stmt->execute();
     include './auto_increment.php';
 
+    // redirect the user to routine.php page...
+    header('Location: routine.php');
+    exit();
 
 } else {
 
