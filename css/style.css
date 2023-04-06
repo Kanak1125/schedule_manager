@@ -70,3 +70,6 @@ tr:nth-child(even) {
     display: flex;
     column-gap: .5rem;
 }
+.btn1{
+    background-color: aqua;
+}
