@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <style>
     * {
@@ -31,14 +31,25 @@
         background-color: orange;
     }
 
+    input[type="submit"] {
+
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+
     .btn {
-        padding: 17px 10px;
+        padding: 6px 15px;
         border: none;
         color: white;
         border-radius: 2.5px;
         cursor: pointer;
         transition: all 300ms ease-out;
-        color: white;
     }
 
     .btn-edit {
@@ -70,8 +81,10 @@
         box-shadow: 0px 1px 5px hsl(0, 79%, 60%);
     }
 
+
     h2 {
         text-align: center;
+        padding: 5px;
     }
 </style>
 
