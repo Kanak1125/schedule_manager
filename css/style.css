@@ -25,7 +25,6 @@ center {
 tr:nth-child(even) {
     background-color: #e0e0e0;
 }
-
 .btn {
     padding: 6px 15px;
     border: none;
@@ -37,14 +36,17 @@ tr:nth-child(even) {
 
 .btn-edit {
     background-color: hsl(203, 92%, 65%);
+    cursor: pointer;
 }
 
 .btn-add {
     background-color: hsl(120, 73%, 65%);
+    cursor: pointer;
 }
 
 .btn-del {
     background-color: hsl(0, 79%, 65%);
+    cursor: pointer;
 }
 
 .btn-edit:hover {
@@ -72,6 +74,4 @@ tr:nth-child(even) {
     display: flex;
     column-gap: .5rem;
 }
-.btn1{
-    background-color: aqua;
-}
+
