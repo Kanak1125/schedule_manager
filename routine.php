@@ -49,14 +49,17 @@
             <th>Action</th>
         </tr>
         <?php foreach ($periods as $p) { 
+            // NOTE: 'H' gives the time in 24-hour format whereas 'h' gives the time in 12-hour format && 'A' gives AM and PM...
+            $formatted_start_time = date('h:i A', strtotime($p['Start_time']));
+            $formatted_end_time = date('h:i A', strtotime($p['End_time']));
         ?>
             <tr>
                 <td align="center"><?php echo $p['Period']?></td>
                 <td><?php echo $p['Subject_name']?></td>
                 <td><?php echo $p['Teacher']?></td>
                 <td>
-                    <?php echo $p['Start_time']?> - 
-                    <?php echo $p['End_time']?> 
+                    <?php echo $formatted_start_time?> - 
+                    <?php echo $formatted_end_time?> 
                 </td>
                 <td>
                     <a href="./edit.php"><button class="btn btn-edit btn-for-row" title="Edit this row"><i class="fas fa-edit"></i></button></a>
