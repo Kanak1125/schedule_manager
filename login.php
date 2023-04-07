@@ -5,43 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href=".\css\style.css">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            font-family: 'Poppins', sans-serif;
-        }
-        h2{
-            padding: 15px;
-            text-align: center;
-        }
-        form{
-            width: 75vw;
-        max-width: 500px;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 1px 1px 10px black;
-        }
-        .login-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        }
-        .input{
-            font-size: 1rem;
-
-        }
-        .btn{
-            height: 52px;
-            width: 200px;
-            display: inline;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/login.css">
+    
 </head>
 <body>
     <div class="login-container">

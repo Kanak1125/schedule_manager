@@ -1,0 +1,30 @@
+@import url(style.css);
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+h2 {
+  padding: 15px;
+  text-align: center;
+}
+form {
+  width: 75vw;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.input {
+  font-size: 1rem;
+}
+.btn {
+  height: 52px;
+  width: 200px;
+  display: inline;
+}
