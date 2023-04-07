@@ -23,4 +23,12 @@ Simple schedule manager using HTML, CSS, and PHP*
     End_time time
     );
   </li>
+  <li>
+    Run this query and create a table named users:<br>
+    CREATE TABLE users(
+    User_id int AUTO_INCREMENT PRIMARY KEY,
+    Username varchar(50),
+    Password varchar(50)    
+    );
+  </li>
 </ul>
