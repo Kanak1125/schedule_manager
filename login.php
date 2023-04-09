@@ -27,6 +27,9 @@
                 <input type="submit" name="submit" value="login">
                 </center>
             </div>
+            <div class="signup">
+                <span>Not a member</span><a href="signup.php">signup</a>
+            </div>
             
         </div>
         

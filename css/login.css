@@ -23,8 +23,11 @@ form {
 .input {
   font-size: 1rem;
 }
-.btn {
-  height: 52px;
-  width: 200px;
-  display: inline;
+input[type="submit"]{
+  width: 50%;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 1rem;
+  cursor: pointer;
+
 }
