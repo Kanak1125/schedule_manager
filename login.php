@@ -22,6 +22,9 @@
             <input type="password" name="password" class="password"><br><br>
             <label for="email">Email :</label>
             <input type="email" name="email" class="email"><br><br>
+            <div>
+                <span>forget password</span>
+            </div>
             <div class="btn">
                 <center>
                 <input type="submit" name="submit" value="login">

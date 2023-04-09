@@ -26,8 +26,22 @@ form {
 input[type="submit"]{
   width: 50%;
   height: 50px;
+  background: rgb(180, 170, 170);
   border: 1px solid black;
   border-radius: 1rem;
   cursor: pointer;
 
+}
+input[type="submit"]:hover{
+  background-color: rgb(106, 104, 104);
+  transition: 1ms;
+}
+.signup{
+  margin: 30px;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+}
+.signup a:hover{
+  text-decoration: inherit;
 }
