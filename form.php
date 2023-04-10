@@ -10,72 +10,71 @@
 
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
+body {
+    font-family: 'Poppins', sans-serif;
+}
 
-    .form-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-    form {
-        width: 75vw;
-        max-width: 500px;
-        /* height: 400px; */
-        /* border: 1px solid black; */
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 1px 1px 10px black;
-        /* background-color: hsla(203, 92%, 85%, 0.6); */
-    }
+form {
+    width: 75vw;
+    max-width: 500px;
+    /* height: 400px; */
+    /* border: 1px solid black; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black;
+    /* background-color: hsla(203, 92%, 85%, 0.6); */
+}
 
-    input[type="number"],
-    input[type="text"],
-    input[type="time"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        transition: all 300ms linear;
-        border: 1px solid grey;
-        border-radius: 5px;
-    }
+input[type="number"],
+input[type="text"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: all 300ms linear;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
 
-    input:focus {
-        background-color: hsl(203, 92%, 95%);
-        outline: none !important;
-    }
+input:focus {
+    background-color: hsl(203, 92%, 95%);
+    outline: none !important;
+}
 
-    h2 {
-        text-align: center;
-    }
+h2 {
+    text-align: center;
+}
 
-    .time-container {
-        display: flex;
-        width: 100%;
-        column-gap: 20px;
-    }
+.time-container {
+    display: flex;
+    width: 100%;
+    column-gap: 20px;
+}
 
-    .time-container div {
-        width: 100%;
-    }
+.time-container div {
+    width: 100%;
+}
 
-    .form-btn-container {
-        margin: 20px 0;
-        display: flex;
-        column-gap: 10px;
-    }
-
+.form-btn-container {
+    margin: 20px 0;
+    display: flex;
+    column-gap: 10px;
+}
 </style>
 
 <body>

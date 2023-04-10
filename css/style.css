@@ -78,3 +78,10 @@ tr:nth-child(even) {
     display: flex;
     column-gap: .5rem;
 }
+
+.search {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+
+}

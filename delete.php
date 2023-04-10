@@ -67,11 +67,14 @@ include_once './dbconn.php';
 
 if (isset($_POST['search'])) {
     $Period = $_POST['search'];
-    $query = "DELETE FROM routine WHERE Period = $Period";
+$query = "DELETE FROM routine WHERE Period = :Period";
 
-    $stmt = $pdo->prepare($query);
+$stmt = $pdo->prepare($query);
 
-    $stmt->execute();
+$stmt->bindParam(':Period', $Period, PDO::PARAM_STR);
+
+$stmt->execute();
+
     include './auto_increment.php';
 
     // redirect the user to routine.php page...
