@@ -14,8 +14,8 @@ try {
 }
 
 // Check if search parameter is set
-if (isset($_GET['Period'])) {
-    $Period = $_GET['Period'];
+if (isset($_POST['Period'])) {
+    $Period = $_POST['Period'];
 
     // Prepare the SELECT statement
     $stmt = $conn->prepare("SELECT * FROM routine WHERE Period LIKE :Period");
@@ -56,23 +56,23 @@ $conn = null;
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
 
-    th {
-        background-color: #131313;
-        color: #d0d0d0;
-        padding: 7.5px 20px;
-    }
+        th {
+            background-color: #131313;
+            color: #d0d0d0;
+            padding: 7.5px 20px;
+        }
 
-    tr {
-        transition: all 300ms ease-out;
-    }
+        tr {
+            transition: all 300ms ease-out;
+        }
 
-    table tr:hover {
-        background-color: hsl(203, 92%, 93%);
-    }
+        table tr:hover {
+            background-color: hsl(203, 92%, 93%);
+        }
     </style>
 </head>
 
@@ -97,30 +97,30 @@ $conn = null;
             $formatted_start_time = date('h:i A', strtotime($p['Start_time']));
             $formatted_end_time = date('h:i A', strtotime($p['End_time']));
             ?>
-        <tr>
-            <td align="center">
-                <?php echo $p['Period'] ?>
-            </td>
-            <td>
-                <?php echo $p['Subject_name'] ?>
-            </td>
-            <td>
-                <?php echo $p['Teacher'] ?>
-            </td>
-            <td>
-                <?php echo $formatted_start_time ?> -
-                <?php echo $formatted_end_time ?>
-            </td>
-            <td>
-                <a href="./form.php?period=<?php echo $p['Period'] ?>"><button class="btn btn-edit btn-for-row"
-                        title="Edit this row"><i class="fas fa-edit"></i></button></a>
+            <tr>
+                <td align="center">
+                    <?php echo $p['Period'] ?>
+                </td>
+                <td>
+                    <?php echo $p['Subject_name'] ?>
+                </td>
+                <td>
+                    <?php echo $p['Teacher'] ?>
+                </td>
+                <td>
+                    <?php echo $formatted_start_time ?> -
+                    <?php echo $formatted_end_time ?>
+                </td>
+                <td>
+                    <a href="./form.php?period=<?php echo $p['Period'] ?>"><button class="btn btn-edit btn-for-row"
+                            title="Edit this row"><i class="fas fa-edit"></i></button></a>
 
-                <!-- passing current period of the row from the table to the 'delete_row.php' file -->
-                <a href="./delete_row.php?period=<?php echo $p['Period'] ?>">
-                    <button class="btn btn-del btn-for-row"><i class="fas fa-trash"
-                            title="Delete this row"></i></button>
-                </a>
-            </td>
+                    <!-- passing current period of the row from the table to the 'delete_row.php' file -->
+                    <a href="./delete_row.php?period=<?php echo $p['Period'] ?>">
+                        <button class="btn btn-del btn-for-row"><i class="fas fa-trash"
+                                title="Delete this row"></i></button>
+                    </a>
+                </td>
             <?php } ?>
         </tr>
     </table>
