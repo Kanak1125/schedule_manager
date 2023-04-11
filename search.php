@@ -1,45 +1,22 @@
 <?php
-// Database credentials
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "routine";
+include_once("dbconn.php");
 
-// Create a PDO instance
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-
-// Check if search parameter is set
 if (isset($_POST['Period'])) {
     $Period = $_POST['Period'];
 
-    // Prepare the SELECT statement
-    $stmt = $conn->prepare("SELECT * FROM routine WHERE Period LIKE :Period");
+    $stmt = $pdo->prepare("SELECT * FROM routine where Period = :Period");
+    $stmt->bindParam(':Period', $Period);
+    $result = $stmt->execute();
 
-    // Bind the search parameter
-    $searchParam = "%$Period%";
-    $stmt->bindParam(':Period', $searchParam);
-    // Execute the statement
-    $stmt->execute();
-
-    // Fetch the results as an associative array
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} else {
-    // If search parameter is not set, fetch all records
-    $stmt = $conn->prepare("SELECT * FROM routine");
-    $stmt->execute();
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if ($result) {
+        $value = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        // Handle the error here
+        echo "Error fetching data from the database";
+    }
 }
-
-// Output the results in an HTML table
-
-// Close the connection
-$conn = null;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,60 +53,64 @@ $conn = null;
     </style>
 </head>
 
-<center>
-    <h2>Routine</h2>
-    <div class="search">
-        <label for="search">Search: </label>
-        <input type="text" name="Period" id="Period">
-        <a href="search.php"><i class="fa-solid fa-magnifying-glass"></i></a>
+<body>
+    <center>
+        <h2>Routine</h2>
+        <form method="POST">
+
+            <div class="search">
+                <label for="search">Search: </label>
+                <input type="number" name="Period" id="Period">
+                <a href="search.php"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </form>
+
+        <table>
+            <tr class="table-heading">
+                <th>Period</th>
+                <th>Subject Name</th>
+                <th>Teacher</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+            <?php foreach ($value as $p) {
+                // NOTE: 'H' gives the time in 24-hour format whereas 'h' gives the time in 12-hour format && 'A' gives AM and PM...
+                $formatted_start_time = date('h:i A', strtotime($p['Start_time']));
+                $formatted_end_time = date('h:i A', strtotime($p['End_time']));
+                ?>
+                <tr>
+                    <td align="center">
+                        <?php echo $p['Period'] ?>
+                    </td>
+                    <td>
+                        <?php echo $p['Subject_name'] ?>
+                    </td>
+                    <td>
+                        <?php echo $p['Teacher'] ?>
+                    </td>
+                    <td>
+                        <?php echo $formatted_start_time ?> -
+                        <?php echo $formatted_end_time ?>
+                    </td>
+                    <td>
+                        <a href="./form.php?period=<?php echo $p['Period'] ?>"><button class="btn btn-edit btn-for-row"
+                                title="Edit this row"><i class="fas fa-edit"></i></button></a>
+
+                        <!-- passing current period of the row from the table to the 'delete_row.php' file -->
+                        <a href="./delete_row.php?period=<?php echo $p['Period'] ?>">
+                            <button class="btn btn-del btn-for-row"><i class="fas fa-trash"
+                                    title="Delete this row"></i></button>
+                        </a>
+                    </td>
+                <?php } ?>
+            </tr>
+        </table>
+    </center>
+    <div class="btn-container">
+        <a href="./form.php?period=<?php 0 ?>"><button class="btn btn-add">Update</button></a>
+        <!-- <a href="./edit.php"><button class="btn btn-edit">Edit</button></a> -->
+        <a href="./delete.php"><button class="btn btn-del">Delete</button></a>
     </div>
-
-    <table>
-        <tr class="table-heading">
-            <th>Period</th>
-            <th>Subject Name</th>
-            <th>Teacher</th>
-            <th>Time</th>
-            <th>Action</th>
-        </tr>
-        <?php foreach ($periods as $p) {
-            // NOTE: 'H' gives the time in 24-hour format whereas 'h' gives the time in 12-hour format && 'A' gives AM and PM...
-            $formatted_start_time = date('h:i A', strtotime($p['Start_time']));
-            $formatted_end_time = date('h:i A', strtotime($p['End_time']));
-            ?>
-            <tr>
-                <td align="center">
-                    <?php echo $p['Period'] ?>
-                </td>
-                <td>
-                    <?php echo $p['Subject_name'] ?>
-                </td>
-                <td>
-                    <?php echo $p['Teacher'] ?>
-                </td>
-                <td>
-                    <?php echo $formatted_start_time ?> -
-                    <?php echo $formatted_end_time ?>
-                </td>
-                <td>
-                    <a href="./form.php?period=<?php echo $p['Period'] ?>"><button class="btn btn-edit btn-for-row"
-                            title="Edit this row"><i class="fas fa-edit"></i></button></a>
-
-                    <!-- passing current period of the row from the table to the 'delete_row.php' file -->
-                    <a href="./delete_row.php?period=<?php echo $p['Period'] ?>">
-                        <button class="btn btn-del btn-for-row"><i class="fas fa-trash"
-                                title="Delete this row"></i></button>
-                    </a>
-                </td>
-            <?php } ?>
-        </tr>
-    </table>
-</center>
-<div class="btn-container">
-    <a href="./form.php?period=<?php 0 ?>"><button class="btn btn-add">Update</button></a>
-    <!-- <a href="./edit.php"><button class="btn btn-edit">Edit</button></a> -->
-    <a href="./delete.php"><button class="btn btn-del">Delete</button></a>
-</div>
 </body>
 
 </html>
