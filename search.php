@@ -1,15 +1,16 @@
 <?php
-include_once("dbconn.php");
+include_once "./dbconn.php";
 
-if (isset($_POST['Period'])) {
-    $Period = $_POST['Period'];
+if (isset($_POST['period'])) {
+    $period = $_POST['period'];
 
-    $stmt = $pdo->prepare("SELECT * FROM routine where Period = :Period");
-    $stmt->bindParam(':Period', $Period);
+    $stmt = $pdo->prepare("SELECT * FROM routine where Period = :period");
+    $stmt->bindParam(':period', $period);
     $result = $stmt->execute();
+    $value = array();
 
     if ($result) {
-        $value = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $value = $stmt->fetchAll();
     } else {
         // Handle the error here
         echo "Error fetching data from the database";
@@ -56,15 +57,16 @@ if (isset($_POST['Period'])) {
 <body>
     <center>
         <h2>Routine</h2>
-        <form method="POST">
 
-            <div class="search">
+        <div class="search">
+            <form action="./search.php" method="post">
                 <label for="search">Search: </label>
-                <input type="number" name="Period" id="Period">
-                <a href="search.php"><i class="fa-solid fa-magnifying-glass"></i></a>
-            </div>
-        </form>
-
+                <input type="number" name="period" id="period">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
         <table>
             <tr class="table-heading">
                 <th>Period</th>
@@ -73,7 +75,7 @@ if (isset($_POST['Period'])) {
                 <th>Time</th>
                 <th>Action</th>
             </tr>
-            <?php foreach ($value as $p) {
+            <?php foreach($value as $p) {
                 // NOTE: 'H' gives the time in 24-hour format whereas 'h' gives the time in 12-hour format && 'A' gives AM and PM...
                 $formatted_start_time = date('h:i A', strtotime($p['Start_time']));
                 $formatted_end_time = date('h:i A', strtotime($p['End_time']));
@@ -112,5 +114,4 @@ if (isset($_POST['Period'])) {
         <a href="./delete.php"><button class="btn btn-del">Delete</button></a>
     </div>
 </body>
-
 </html>

@@ -45,14 +45,16 @@ $periods = $stmt->fetchAll();
 <body>
     <center>
         <h2>Routine</h2>
-        <form method="POST">
 
             <div class="search">
-                <label for="search">Search: </label>
-                <input type="number" name="Period" id="Period">
-                <a href="search.php"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <form action="./search.php" method="post">
+                    <label for="search">Search: </label>
+                    <input type="number" name="period" id="period">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
             </div>
-        </form>
 
         <table>
             <tr class="table-heading">
@@ -101,5 +103,4 @@ $periods = $stmt->fetchAll();
         <a href="./delete.php"><button class="btn btn-del">Delete</button></a>
     </div>
 </body>
-
 </html>
