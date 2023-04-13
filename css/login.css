@@ -8,9 +8,10 @@ h2 {
   text-align: center;
 }
 form {
+  height: 500px;
   width: 75vw;
-  max-width: 500px;
-  padding: 20px;
+  max-width: 400px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 1px 1px 10px black;
 }
@@ -23,6 +24,7 @@ form {
 .input {
   font-size: 1rem;
 }
+
 input[type="submit"]{
   width: 50%;
   height: 50px;
@@ -40,6 +42,7 @@ input[type="submit"]:hover{
   margin: 30px;
   padding: 0px;
   text-align: center;
+  justify-content: center;
   font-size: 14px;
 }
 .signup a:hover{

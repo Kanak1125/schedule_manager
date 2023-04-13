@@ -1,3 +1,8 @@
+<?
+ session_start();
+ include 'dbconn.php'
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +25,6 @@
             <input type="text" name="uname" class="uname"><br><br>
             <label for="password">Password :</label> 
             <input type="password" name="password" class="password"><br><br>
-            <label for="email">Email :</label>
-            <input type="email" name="email" class="email"><br><br>
             <div>
                 <span>forget password</span>
             </div>
@@ -31,7 +34,7 @@
                 </center>
             </div>
             <div class="signup">
-                <span>Not a member</span><a href="signup.php">signup</a>
+                Not a member<a href="signup.php">signup</a>
             </div>
             
         </div>
